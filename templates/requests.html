@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>發布需求</title>
+  <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- 頁首 -->
+  <header class="site-header">
+    <img src="{{ url_for('static', filename='icons/logo.png') }}" alt="TutorVibe Logo" class="logo-icon">
+    <h1 class="site-title">TutorVibe 家教媒合平台</h1>
+  </header>
+
+  <!-- back button -->
+  <main class="form-container">
+    <a href="{{ url_for('member') }}" class="btn-back">← 返回會員頁</a>
+    <h2>您的需求</h2>
+    <form method="post" action="{{ url_for('requests_page') }}">
+      <label for="subject">找哪一科的家教？</label>
+      <input type="text" id="subject" name="subject" required>
+      </br>
+      <label for="course">學生想學甚麼課程？</label>
+      <input type="text" id="course" name="course" required>
+      </br>
+      <label for="age">學生的年齡？</label>
+      <input type="number" id="age" name="age" min="1" required>
+      </br>
+      <label for="budget">上課預算？</label>
+      <input type="text" id="budget" name="budget" required>
+      </br>
+      <label for="gender">指定老師性別？</label>
+      <select id="gender" name="gender">
+        <option value="any">不限</option>
+        <option value="female">女</option>
+        <option value="male">男</option>
+      </select>
+      </br>
+      <label for="time">希望的上課時間？</label>
+      <input type="text" id="time" name="time" placeholder="例：週末 14:00-16:00">
+      </br>
+      <label for="duration">希望的上課時長？</label>
+      <input type="text" id="duration" name="duration" placeholder="例：1 小時">
+      </br>
+      <label for="location">希望的授課地點？</label>
+      <input type="text" id="location" name="location" required>
+      </br>
+      <label for="notes">備註</label>
+      </br>
+      <textarea id="notes" name="notes" rows="4" placeholder="其他補充說明..."></textarea>
+      </br>
+      <button type="submit" class="btn-primary">送出</button>
+    </form>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <p>© 2025 TutorVibe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

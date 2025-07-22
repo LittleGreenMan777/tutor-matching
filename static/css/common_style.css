@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+  line-height: 1.5;
+}
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background: #27a527;
+}
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+.site-title {
+  font-size: 1.5rem;
+  color: #fff;
+}

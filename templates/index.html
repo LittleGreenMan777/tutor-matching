@@ -1,33 +1,62 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>家教媒合｜Home</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家教媒合｜首頁</title>
+  <link href="{{ url_for('static', filename='handshake.jpg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/common_style.css') }}">
 </head>
 <body>
+  <!-- 頁首 -->
   <header class="site-header">
-    <h1 class="logo">TutorVibe</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Tutors</a>
-      <a href="#">Students</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div>
+      <h1 class="site-title" style="display: block;">家教媒合平台</h1>
+    </div>
+    
   </header>
 
-  <main class="hero">
-    <div class="hero-content">
-      <h2>Find Your Perfect Tutor</h2>
-      <p>Connect with experienced tutors in your area and boost your learning!</p>
-      <a href="#" class="btn-primary">Get Started</a>
-    </div>
+  <!-- 文字介紹 -->
+  <main class="intro">
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div class="intro-text">
+    歡迎來到 TutorVibe！快速找到優質家教，並輕鬆預約。
+  </div>
+  <div>
+    <a href="{{ url_for('login') }}" class="btn-start">開始使用</a>
+  </div>
+  
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 TutorVibe. All rights reserved.</p>
-  </footer>
 </body>
 </html>

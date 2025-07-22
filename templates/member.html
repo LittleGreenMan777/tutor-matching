@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員專區</title>
+  <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- 頁首 -->
+  <header class="site-header">
+    <img src="{{ url_for('static', filename='icons/logo.png') }}" alt="TutorVibe Logo" class="logo-icon">
+    <h1 class="site-title">TutorVibe 家教媒合平台</h1>
+  </header>
+
+  <!-- 會員問候 -->
+  <main class="member-container">
+    <p class="greeting">你好，member</p>
+
+    <!-- 漢堡選單 -->
+    <button class="hamburger-btn" aria-label="Toggle menu">☰</button>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">我的預約</a></li>
+        <li><a href="#">設定</a></li>
+      </ul>
+    </nav>
+
+    <!-- 操作按鈕 -->
+    <div class="actions">
+      <button class="btn-action">找學生</button>
+      <button class="btn-action">找老師</button>
+      <button class="btn-action">+ 發送需求</button>
+    </div>
+
+    <!-- 文字區 -->
+    <!-- <section class="member-text">
+      <p>在此您可以管理所有家教需求，瀏覽您的預約，或發送全新需求給教師或學生。</p>
+    </section> -->
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <p>© 2025 TutorVibe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

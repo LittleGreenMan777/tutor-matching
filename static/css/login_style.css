@@ -1,0 +1,87 @@
+/* --- Card Container --- */
+.form-container {
+  width: 100%;
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Form fields */
+.form-card label {
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.form-card input[type="email"],
+.form-card input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+.btn-summit{
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background: #00a000;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+}
+.btn-summit:hover{
+  background: #97a397;
+}
+
+/* Divider with text */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.divider span {
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
+/* Sign-up prompt */
+.signup-prompt {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+.signup-prompt a {
+  color: #00a000;
+  text-decoration: none;
+}
+.signup-prompt a:hover {
+  text-decoration: underline;
+}

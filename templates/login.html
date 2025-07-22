@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家教媒合｜登入</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/common_style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+</head>
+<body>
+  <!-- 頁首 -->
+  <header class="site-header">
+    <h1 class="site-title">家教媒合平台</h1>
+  </header>
+
+  <!-- 登入表單區 -->
+  <main class="form-container">
+    <h2 class="form-title">登入</h2>
+    <form method="post" action="/login" class="form-card">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="example@mail.com">
+      
+      <label for="password">密碼</label>
+      <input type="password" id="password" name="password" required placeholder="輸入密碼">
+
+      <button type="submit" class="btn-summit">登入</button>
+    </form>
+    <div class="divider"><span>快速登入</span></div>
+    <!-- 未來Google登入按鈕占位 -->
+    <div class="oauth-placeholder">
+      <button class="btn-oauth" disabled>使用 Google 登入 (coming soon)</button>
+    </div>
+    <p class="signup-prompt">
+      還沒有帳號？ <a href="/signup">註冊</a>以成為會員
+    </p>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="site-footer">
+    <p>© 2025 TutorVibe. All rights reserved.</p>
+  </footer>
+</body>
+</html>
