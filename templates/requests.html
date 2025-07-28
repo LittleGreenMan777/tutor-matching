@@ -4,38 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>發布需求</title>
-  <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/common_style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/requests_style.css') }}">
 </head>
 <body>
+  
   <!-- 頁首 -->
   <header class="site-header">
-    <img src="{{ url_for('static', filename='icons/logo.png') }}" alt="TutorVibe Logo" class="logo-icon">
-    <h1 class="site-title">TutorVibe 家教媒合平台</h1>
+    <h1 class="site-title">家教媒合平台</h1>
   </header>
 
+  <a class="btn-back" href="/member">← 返回</a>
   <!-- back button -->
   <main class="form-container">
-    <a href="{{ url_for('member') }}" class="btn-back">← 返回會員頁</a>
+    
     <h2>您的需求</h2>
-    <form method="post" action="{{ url_for('requests_page') }}">
+    <form method="post" action="">
       <label for="subject">找哪一科的家教？</label>
-      <input type="text" id="subject" name="subject" required>
+      <select id="subject" name="subject">
+        <option value="math">數學</option>
+        <option value="phy">物理</option>
+        <option value="chem">化學</option>
+        <option value="bio">生物</option>
+        <option value="earth">地球科學</option>
+        <option value="eng">英文</option>
+        <option value="chi">國文</option>
+        <option value="dem">公民</option>
+        <option value="hist">歷史</option>
+        <option value="geo">地理</option>
+        <option value="code">程式語言</option>
+      </select>
       </br>
       <label for="course">學生想學甚麼課程？</label>
       <input type="text" id="course" name="course" required>
       </br>
       <label for="age">學生的年齡？</label>
-      <input type="number" id="age" name="age" min="1" required>
+      <select id="age" name="age">
+        <option value="18">18歲以上</option>
+        <option value="15">15~18歲</option>
+        <option value="12">12~15歲</option>
+        <option value="9">9~12歲</option>
+        <option value="7">9歲以下</option>
+      </select>
       </br>
       <label for="budget">上課預算？</label>
-      <input type="text" id="budget" name="budget" required>
+      <select id="salary" name="salary">
+        <option value="1000">1000以上</option>
+        <option value="750">750~1000</option>
+        <option value="500">500~750</option>
+        <option value="400">500以下</option>
+      </select> 元/小時
       </br>
       <label for="gender">指定老師性別？</label>
       <select id="gender" name="gender">
         <option value="any">不限</option>
         <option value="female">女</option>
         <option value="male">男</option>
+      </select>
+      </br>
+      <label>上課地區</label>
+      縣市：<select id="city" style="margin-bottom: 0.5rem;">
+      </select>
+      </br>
+      地區：<select id="dist">
       </select>
       </br>
       <label for="time">希望的上課時間？</label>
@@ -50,8 +81,8 @@
       <label for="notes">備註</label>
       </br>
       <textarea id="notes" name="notes" rows="4" placeholder="其他補充說明..."></textarea>
-      </br>
-      <button type="submit" class="btn-primary">送出</button>
+      
+      <button type="submit" class="btn-summit">送出</button>
     </form>
   </main>
 
@@ -59,5 +90,6 @@
   <footer class="site-footer">
     <p>© 2025 TutorVibe. All rights reserved.</p>
   </footer>
+  <script src="{{url_for('static',filename='js/requests_js.js')}}"></script>
 </body>
 </html>

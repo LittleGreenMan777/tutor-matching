@@ -4,25 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>會員專區</title>
-  <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/common_style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/member_style.css') }}">
 </head>
 <body>
   <!-- 頁首 -->
   <header class="site-header">
-    <img src="{{ url_for('static', filename='icons/logo.png') }}" alt="TutorVibe Logo" class="logo-icon">
-    <h1 class="site-title">TutorVibe 家教媒合平台</h1>
+    <h1 class="site-title">家教媒合平台</h1>
+    <!-- 漢堡按鈕 -->
+    <button class="hamburger-btn" aria-label="Toggle menu">☰</button>
+  </header>
+  <header class="top-nav">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="#">訊息</a></li>
+        <li><a href="#">會員資料</a></li>
+        <li><a href="#">項目管理</a></li>
+      </ul>
+    </div>
   </header>
 
-  <!-- 會員問候 -->
-  <main class="member-container">
-    <p class="greeting">你好，member</p>
 
-    <!-- 漢堡選單 -->
-    <button class="hamburger-btn" aria-label="Toggle menu">☰</button>
+  <!-- 會員內容 -->
+  <main class="member-container">
+    <!-- 你好，會員 -->
+    <p class="greeting">你好，會員</p>
+
+    <!-- 側邊選單 (預設隱藏) -->
     <nav class="side-menu">
       <ul>
-        <li><a href="#">首頁</a></li>
+        <li><a href="{{ url_for('member') }}">會員頁</a></li>
         <li><a href="#">我的預約</a></li>
         <li><a href="#">設定</a></li>
       </ul>
@@ -30,15 +41,16 @@
 
     <!-- 操作按鈕 -->
     <div class="actions">
-      <button class="btn-action">找學生</button>
-      <button class="btn-action">找老師</button>
-      <button class="btn-action">+ 發送需求</button>
+      <a href="/studentcase" class="btn-action">找學生</a>
+      <a href="#" class="btn-action">找老師</a>
+      <a href="/requests" class="btn-action btn-primary">+ 發送需求</a>
+
     </div>
 
     <!-- 文字區 -->
-    <!-- <section class="member-text">
-      <p>在此您可以管理所有家教需求，瀏覽您的預約，或發送全新需求給教師或學生。</p>
-    </section> -->
+    <section class="member-text">
+      <p>在這裡您可以管理所有家教需求、瀏覽預約或快速發送新需求給教師或學生。</p>
+    </section>
   </main>
 
   <!-- 頁尾 -->

@@ -35,4 +35,9 @@ def requests_page():
     #     return redirect(url_for('member'))
     return render_template('requests.html')
 
+@app.route('/studentcase')
+def student_case_page():
+
+    return render_template('student_case.html')
+
 app.run(host="0.0.0.0" ,port=5000)
